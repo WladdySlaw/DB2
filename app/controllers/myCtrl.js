@@ -11,7 +11,8 @@ app.controller("myCtrl", function($scope) {
     $scope.addItemKey = function($event){
         var keyCode = $event.which || $event.keyCode;
         if (keyCode === 13) {
-            $scope.itemList.push({ name: $scope.addText, number: 1});
+            var listLength = $scope.itemList.length + 1;
+            $scope.itemList.push({ name: $scope.addText, number: listLength});
             $scope.addText = ('');
             console.log($scope.itemList);
         }
@@ -19,6 +20,7 @@ app.controller("myCtrl", function($scope) {
     $scope.addItem = function(){
         var listLength = $scope.itemList.length + 1;
         $scope.itemList.push({ name: $scope.addText, number: listLength});
+        $scope.addText = ('');
         console.log($scope.itemList);
     };
     $scope.removeItem = function (x) {
