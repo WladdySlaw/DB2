@@ -26,9 +26,16 @@ app.controller("myCtrl", function($scope) {
     $scope.removeItem = function (x) {
         $scope.itemList.splice(x, 1);
         console.log($scope.itemList);
+        for(var i = 0; i<$scope.itemList.length; i++)
+          {
+             $scope.itemList[i].number = i+1;
+          }
     };
     $scope.orderByMe = function(x) {
         $scope.myOrderBy = x;
         console.log($scope.itemList);
     }
+    $scope.updateNumber = function(item, checkNumber){
+            item.name = checkNumber;
+    } 
 });
