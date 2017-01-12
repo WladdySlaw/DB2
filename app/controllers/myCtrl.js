@@ -12,6 +12,7 @@ app.controller("myCtrl", function($scope) {
         var keyCode = $event.which || $event.keyCode;
         if (keyCode === 13) {
             $scope.itemList.push({ name: $scope.addText, number: 1});
+            $scope.addText = ('');
             console.log($scope.itemList);
         }
     };
