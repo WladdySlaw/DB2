@@ -47,7 +47,7 @@
 			</div>
 			<ul class="itemsList">
 				<div class="mCustomScrollbar" data-mcs-theme="dark">
-					<li ng-repeat="x in itemList | orderBy:myOrderBy" ng-click="toggleActive(x)" ng-class="{active:x.active}">
+					<li ng-repeat="x in itemList | orderBy:myOrderBy">
 						<span class="itemsName wow fadeInLeft" ng-click="orderByMe('number')">{{x.number + '. '}}</span>
 						<p class="itemsName wow fadeInLeft" ng-click="orderByMe('name')">{{x.name}}</p>
 						<button class="itemsDelete wow fadeInRight" ng-click="removeItem($index)">Delete</button>

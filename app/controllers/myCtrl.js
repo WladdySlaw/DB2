@@ -35,7 +35,4 @@ app.controller("myCtrl", function($scope) {
         $scope.myOrderBy = x;
         console.log($scope.itemList);
     }
-    $scope.updateNumber = function(item, checkNumber){
-            item.name = checkNumber;
-    } 
 });
